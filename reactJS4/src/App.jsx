@@ -1,34 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ColorPicker from "./ColorPicker.jsx";
+import Mycomponent from "./Mycomponent.jsx";
+import Mycomponent2 from "./Mycomponent2.jsx";
+import Mycomponent3 from "./Mycomponent3.jsx";
+import Mycomponent4 from "./Mycomponent4.jsx";
+
+
+
+
+ // useEffect()----- react hook that tells react to do some code
+    ///when(pick one)
+    //the component rendres,mounts  the state of a value
+    // useEffect(() =>{})  runs after every re-render
+    // useEffect(()=> {},[]) runs only on mount
+    //useEffect(() => {}, [value]) runs mount and after the value changes
+// useEffect (function,[dependencies])
+
+    //uses
+    //event listeners
+    //DOM manipulation
+    //subscriptions(realtime updates)
+    //fetching data from API
+    //clean up after a component unmounts(removing a component from a DOM)
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <ColorPicker />
+    <Mycomponent />
+    <Mycomponent2 />
+    <Mycomponent3 />
+    <Mycomponent4 />
+
     </>
+       
   )
 }
 
